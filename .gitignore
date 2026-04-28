@@ -1,0 +1,55 @@
+# ============================================================
+# AutoGenius — .gitignore
+# ============================================================
+
+# ── Secrets (NEVER commit these) ─────────────────────────────
+.env
+*.key
+*.pem
+secrets/
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+.env/
+ENV/
+dist/
+build/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.egg
+MANIFEST
+
+# ── Outputs (generated at runtime) ───────────────────────────
+outputs/*.json
+outputs/*.md
+outputs/*.png
+outputs/*.jpg
+
+# ── IDE ───────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Laravel ───────────────────────────────────────────────────
+laravel-app/vendor/
+laravel-app/.env
+laravel-app/node_modules/
+laravel-app/storage/logs/
+laravel-app/bootstrap/cache/
+
+# ── Docker ────────────────────────────────────────────────────
+docker/*.log
+
+# ── Kubernetes ────────────────────────────────────────────────
+k8s/*.bak

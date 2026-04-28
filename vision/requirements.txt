@@ -1,0 +1,26 @@
+# ============================================================
+# AutoGenius — Vision Module Requirements
+# Project 2: LangChain + Groq + Pollinations Multimodal Pipeline
+# ============================================================
+
+# --- LLM Orchestration ---
+langchain==0.3.13               # Chains, prompt templates, output parsers
+langchain-groq==0.2.3           # LangChain x Groq integration
+langchain-core==0.3.28          # Core primitives (RunnableSequence, etc.)
+langchain-community==0.3.13     # Community integrations
+
+# --- Groq Client ---
+groq==0.13.1                    # Official Groq Python SDK
+
+# --- HTTP & Image Handling ---
+requests==2.32.3                # HTTP calls to Pollinations.ai REST API
+Pillow==11.1.0                  # Image loading, saving, display
+httpx==0.28.1                   # Async HTTP client
+
+# --- Output & Structured Data ---
+pydantic==2.10.4                # Structured output schemas
+rich==13.9.4                    # Rich terminal output
+
+# --- Utilities ---
+python-dotenv==1.0.1            # Load .env
+python-slugify==8.0.4           # Clean filenames from prompts

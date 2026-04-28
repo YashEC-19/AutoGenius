@@ -1,0 +1,20 @@
+# ============================================================
+# AutoGenius — MASTER Requirements File
+# No version pins — pip resolves compatibility automatically
+# ============================================================
+ 
+crewai
+langchain
+langchain-groq
+langchain-community
+langchain-core
+groq
+requests
+Pillow
+httpx
+pydantic
+rich
+tabulate
+python-slugify
+python-dotenv
+nest-asyncio
