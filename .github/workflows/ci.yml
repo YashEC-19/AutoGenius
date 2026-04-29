@@ -14,18 +14,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Find frontend directory
+        run: find . -name "package.json" -not -path "*/node_modules/*" -maxdepth 3
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: ./react-dashboard
-        run: npm install
+        run: |
+          cd react-dashboard && npm install
 
       - name: Build frontend
-        working-directory: ./react-dashboard
-        run: npm run build
+        run: |
+          cd react-dashboard && npm run build
 
   backend:
     name: Backend Syntax Check
@@ -40,10 +43,9 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        working-directory: ./api
         run: |
           pip install fastapi uvicorn python-dotenv requests langchain-groq langchain-core
 
       - name: Check syntax
-        working-directory: ./api
-        run: python -m py_compile main.py && echo "Backend syntax OK"
+        run: |
+          cd api && python -m py_compile main.py && echo "Backend syntax OK"
