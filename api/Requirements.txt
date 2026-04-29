@@ -6,3 +6,6 @@ python-dotenv
 crewai
 langchain
 langchain-groq
+langchain-core
+pydantic
+httpx
