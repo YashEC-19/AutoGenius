@@ -33,7 +33,7 @@ export default function VisionLab() {
     setError(null);
     try {
       const encoded = encodeURIComponent(prompt);
-      const response = await fetch(`http://localhost:8000/vision/generate?prompt=${encoded}`);
+      const response = await fetch(`https://autogenius.onrender.com/vision/generate?prompt=${encoded}`);
       if (!response.ok) throw new Error('Generation failed');
       const blob = await response.blob();
       setImageUrl(URL.createObjectURL(blob));

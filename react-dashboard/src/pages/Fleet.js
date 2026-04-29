@@ -54,7 +54,7 @@ export default function Fleet() {
     localStorage.setItem('agent_current_step', '0');
 
     try {
-      const response = await fetch('http://localhost:8000/research/stream', {
+      const response = await fetch('https://autogenius.onrender.com/research/stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query })
@@ -81,7 +81,7 @@ export default function Fleet() {
         }
       }
 
-      const res = await fetch('http://localhost:8000/research', {
+      const res = await fetch('https://autogenius.onrender.com/research',{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query })
