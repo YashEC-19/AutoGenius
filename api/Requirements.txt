@@ -1,11 +1,11 @@
 fastapi
 uvicorn
 requests
-groq
 python-dotenv
-crewai
 langchain
 langchain-groq
 langchain-core
 pydantic
+httpx
+groq
 httpx
